@@ -6,6 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
+import typescriptEslint from '@typescript-eslint/eslint-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,6 +34,7 @@ export default [
             "@stylistic": stylistic,
             "sort-destructure-keys": sortDestructureKeys,
             perfectionist,
+            '@typescript-eslint': typescriptEslint,
         },
 
         languageOptions: {
@@ -71,8 +73,12 @@ export default [
             "no-duplicate-imports": "warn",
 
             "no-unused-vars": ["warn", {
-                argsIgnorePattern: "^_",
+                argsIgnorePattern: "^_", varsIgnorePattern: '^_'
             }],
+            '@typescript-eslint/no-unused-vars': [
+                'warn',
+                { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+              ],
 
             "no-var": "error",
 
