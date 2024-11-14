@@ -26,7 +26,7 @@ A shared ESLint configuration for GTPD projects, optimized for Next.js, React, T
     This package relies on the following peer dependencies:
 
     ```bash
-    npm install eslint eslint-config-next eslint-config-prettier eslint-plugin-react eslint-plugin-tailwindcss eslint-plugin-sort-destructure-keys eslint-plugin-perfectionist @stylistic/eslint-plugin @eslint/eslintrc @eslint/js prettier --save-dev
+    npm install eslint eslint-config-next eslint-config-prettier eslint-plugin-react eslint-plugin-tailwindcss eslint-plugin-sort-destructure-keys eslint-plugin-perfectionist @stylistic/eslint-plugin @eslint/eslintrc @eslint/js prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
     ```
 
     You can use the following one-liner to install all at once:
